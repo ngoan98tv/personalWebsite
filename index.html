@@ -1,0 +1,226 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+	<title>Ngoan Tran Portfolio</title>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta name="keywords" content="ngoantran,ngoantran.info,Ngoan Tran,Tran Van Ngoan,Ngoan,Ngoãn Trần,Ngoan Tran resume">
+	<meta name="description" content="Tran Van Ngoan, A student of Information Technology at Can Tho University, learning for passion and job. Love programming and software development. Experienced in web development, C programming, design and analysis of algorithms.">
+	<link rel="stylesheet" type="text/css" href="/css/w3.css">
+	<link rel="stylesheet" type="text/css" href="/css/main.css">
+	<link rel="stylesheet" type="text/css" href="/css/font-awesome-4.7.0/css/font-awesome.min.css">
+	<link href="https://fonts.googleapis.com/css?family=Marcellus" rel="stylesheet">
+</head>
+<body class="w3-light-gray" onload="loadData()">
+	<header >
+		<div class="w3-hide-small w3-container w3-text-white w3-top" id="navbar">
+			<div class="w3-large w3-padding" style="float: left; font-family: 'Marcellus', sans-serif;">
+				Ngoan Tran Portfolio
+			</div>
+			<a href="#contact" class="w3-bar-item w3-button" style="float: right;">Contact</a>
+			<a href="#library" class="w3-bar-item w3-button" style="float: right;">Library</a>
+			<a href="#photos" class="w3-bar-item w3-button" style="float: right;">Photos</a>
+			<a href="#chat" class="w3-bar-item w3-button" style="float: right;">Chat</a>
+			<a href="#about" class="w3-bar-item w3-button" style="float: right;">About</a>
+		</div>
+
+		<div class="w3-hide-medium w3-hide-large  w3-top w3-green w3-card-4">
+			<div id="open" class="w3-button" style="float: left;"  onclick="openMenu()"><i class="fa fa-bars fa-2x" aria-hidden="true"></i></div>
+			<div id="close" class="w3-button" style="float: left; display: none;"  onclick="closeMenu()"><i class="fa fa-times fa-2x" aria-hidden="true"></i></div>
+			<div class="w3-large w3-padding w3-center" style="width: 100%; font-family: 'Marcellus', serif;">
+				Ngoan Tran Portfolio
+			</div>
+			<div id="menu" class="w3-border-top" style="display: none;">
+				<a href="#about" onclick="closeMenu()" class="w3-button w3-bar-item w3-border-bottom" style="width: 100%;">About</a>
+				<a href="#chat" onclick="closeMenu()" class="w3-button w3-bar-item w3-border-bottom" style="width: 100%;">Chat</a>
+				<a href="#photos" onclick="closeMenu()" class="w3-button w3-bar-item w3-border-bottom" style="width: 100%;">Photos</a>
+				<a href="#library" onclick="closeMenu()" class="w3-button w3-bar-item w3-border-bottom" style="width: 100%;">Library</a>
+				<a href="#contact" onclick="closeMenu()" class="w3-button w3-bar-item w3-border-bottom" style="width: 100%;">Contact</a>
+			</div>
+		</div>
+
+	</header>
+	
+		<div class="w3-display-container w3-hide-small" style="background-image: url(images/umbrella.png); background-repeat: no-repeat; background-attachment: fixed; background-position: center; background-size: cover; height: 500px;" >
+			<div class="w3-display-middle w3-text-white w3-xxlarge w3-center">
+				<p style="font-family: 'Marcellus', serif;"> <b> &#10077<span id="quote0"></span>&#10078 </b> <br>
+					<i class="w3-large"><< <span id="quoteAuth"></span> >></i>
+				</p>
+			</div>
+		</div>
+
+		<div class="w3-display-container w3-hide-medium w3-hide-large w3-margin-top" style="background-image: url(images/umbrella.png); background-repeat: no-repeat; background-attachment: fixed; background-position: center; background-size: cover; min-height: 300px;" >
+			<div class="w3-display-middle w3-text-white w3-center">
+				<h4 style="font-family: 'Marcellus', serif;"> <b> &#10077<span id="quote1"></span>&#10078 </b> <br>
+					<i class="w3-small"><< <span id="quoteAuth0"></span> >></i>
+				</h4>
+			</div>
+		</div>
+	
+	<div class="w3-content w3-margin-top">
+		<div id="about" class="w3-card w3-container w3-justify w3-margin w3-padding w3-center">
+			<img id="profileAvartar" src="/chat/user.png" class="w3-image w3-circle w3-border-green w3-border" style="height: 200px;">
+			<h3>Tran Van Ngoan</h3>
+			<hr style="width:200px; height:1px; border: 0; text-align: center; margin: auto;" class="w3-green">
+			<p id="intro"></p>
+			<a href="" class="w3-text-green" id="cvlink" target="_blank">See CV</a>
+			<hr style="height:1px; border: 0;" class="w3-green">
+			<div class="w3-half w3-container w3-padding">
+				<div class="w3-center w3-leftbar w3-rightbar w3-border-green w3-padding w3-pale-green w3-hover-shadow">
+					<h4><i class="fa fa-suitcase fa-fw w3-margin-right w3-xxlarge w3-text-green"></i></h4>
+					<h5 class="w3-opacity"><b id="workName"></b></h5>
+					<h6 class="w3-text-green"><i class="fa fa-calendar fa-fw w3-margin-right"></i><span id="workStart"></span> - <span class="w3-tag w3-green w3-round">Current</span></h6>
+					<p id="workDescribe"></p>
+				</div>
+			</div>
+			<div class="w3-center w3-half w3-container w3-padding">
+				<div class="w3-leftbar w3-rightbar w3-border-green w3-padding w3-pale-green w3-hover-shadow">
+					<h4><i class="fa fa-graduation-cap fa-fw w3-margin-right w3-xxlarge w3-text-green"></i></h4><h5 class="w3-opacity"><b id="eduName"></b></h5>
+					<h6 class="w3-text-green"><i class="fa fa-calendar fa-fw w3-margin-right"></i><span id="eduStart"></span> - <span id="eduEnd"></span></h6>
+					<p id="eduDescribe"></p>
+				</div>
+			</div>
+		</div>
+		<div id="chat" class="w3-card w3-container w3-margin w3-padding w3-center">
+			<h3>Chat Entry</h3>
+			<hr style="width:200px; height:1px; border: 0; text-align: center; margin: auto;" class="w3-green">
+			<div class="w3-half">
+				<div class="w3-center w3-leftbar w3-rightbar w3-border-green w3-padding w3-pale-green w3-margin w3-hover-shadow">
+					<p>Already have an ID</p>
+					<p id="enterError" style="color: red; display: none;"> error </p>
+					<p><input type="text" id="enterID" style="width: 100%;" placeholder="Enter your ID here"></p>
+					<button class="w3-button w3-green">Enter</button>
+				</div>
+			</div>
+			<div class="w3-half">
+				<div class="w3-center w3-leftbar w3-rightbar w3-border-green w3-padding w3-pale-green w3-margin w3-hover-shadow">
+					<p>Make new conversation</p>
+					<p id="makeError" style="color: red; display: none;"> error</p>
+					<p><input type="text" id="makeID" style="width: 100%;" placeholder="Enter new ID without spaces or any special symbols"></p>
+					<button class="w3-button w3-green">Create</button>
+				</div>
+			</div>
+		</div>
+		<div id="photos" class="w3-card w3-container w3-margin w3-padding w3-center">
+			<h3>Photos</h3>
+			<hr style="width:200px; height:1px; border: 0; text-align: center; margin: auto;" class="w3-green">
+			<div class="w3-container w3-margin">
+				<div class="w3-padding">
+					<div class="w3-twothird w3-padding w3-hover-opacity" onclick="document.getElementById('img01').style.display='block'">
+						<img id="img01b" class="w3-image">
+					</div>
+					<div id="img01" class="w3-modal w3-animate-zoom" onclick="this.style.display='none'">
+						<img id="img01a" class="w3-modal-content" style="max-height: 100%; width: auto;">
+					</div>
+					<div class="w3-third w3-padding w3-hover-opacity" onclick="document.getElementById('img02').style.display='block'">
+						<img id="img02b" class="w3-image">
+					</div>
+					<div id="img02" class="w3-modal w3-animate-zoom" onclick="this.style.display='none'">
+						<img id="img02a" class="w3-modal-content" style="max-height: 100%; width: auto;">
+					</div>
+					<div class="w3-third w3-padding w3-hover-opacity" onclick="document.getElementById('img03').style.display='block'">
+						<img id="img03b" class="w3-image">
+					</div>
+					<div id="img03" class="w3-modal w3-animate-zoom" onclick="this.style.display='none'">
+						<img id="img03a" class="w3-modal-content" style="max-height: 100%; width: auto;">
+					</div>
+				</div>
+				<div class="w3-padding w3-clear">
+					<div class="w3-third w3-padding w3-hover-opacity" onclick="document.getElementById('img04').style.display='block'">
+						<img id="img04b" class="w3-image">
+					</div>
+					<div id="img04" class="w3-modal w3-animate-zoom" onclick="this.style.display='none'">
+						<img id="img04a" class="w3-modal-content" style="max-height: 100%; width: auto;">
+					</div>
+					<div class="w3-twothird w3-padding w3-hover-opacity" onclick="document.getElementById('img05').style.display='block'">
+						<img id="img05b" class="w3-image">
+					</div>
+					<div id="img05" class="w3-modal w3-animate-zoom" onclick="this.style.display='none'">
+						<img id="img05a" class="w3-modal-content" style="max-height: 100%; width: auto;">
+					</div>
+				</div>
+			</div>
+			<hr> 
+			<a href="https://www.facebook.com/facengoantran/photos_all" class="w3-button w3-green w3-clear" target="_blank">See all</a>
+			<!--
+			<div id="viewPhotos" class="w3-button w3-green w3-clear" style="padding: 5px" onclick=""> See all </div>
+			-->
+		</div>
+		<div id="library" class="w3-card w3-container w3-margin w3-padding w3-center"> 
+			<h3>Library</h3>
+			<hr style="width:200px; height:1px; border: 0; text-align: center; margin: auto;" class="w3-green">
+			<div class="w3-half w3-padding">
+				<div class="w3-hover-shadow w3-padding w3-rightbar w3-pale-green w3-leftbar w3-border-green w3-center w3-text-gray">
+					<p><i class="fa fa-code fa-5x" aria-hidden="true"></i></p>
+					<p>Source Code</p>
+				</div>	
+			</div>
+			<!--
+			<div id="codeModal" class="w3-modal" onclick="this.style.display='none'">
+				<div class="w3-modal-content">
+					<header class="w3-green w3-padding">
+						Source Code
+					</header>
+					<div class="w3-container" style="height: 100%;">
+
+					</div>
+				</div>
+			</div>
+			-->
+			<div class="w3-half w3-padding">
+				<div class="w3-hover-shadow w3-padding w3-pale-green w3-rightbar w3-leftbar w3-border-green w3-text-gray w3-center">
+					<p><i class="fa fa-book fa-5x" aria-hidden="true"></i></p>
+					<p>Books</p>
+				</div>
+			</div>
+			<!--
+			<div id="bookModal" class="w3-modal" onclick="this.style.display='none'">
+				<div class="w3-modal-content">
+					
+				</div>
+			</div>
+			-->
+		</div> 
+		<div id="contact" class="w3-card w3-container w3-margin w3-center">
+			<h3>Contact</h3>
+			<hr style="width:200px; height:1px; border: 0; text-align: center; margin: auto;" class="w3-green">
+			<div>
+				<p><i class="fa fa-home fa-fw w3-margin-right w3-large w3-text-green"></i><span id="address"></span></p>
+				<p><i class="fa fa-phone fa-fw w3-margin-right w3-large w3-text-green"></i><span id="mobile"></span></p>
+				<p><i class="fa fa-envelope fa-fw w3-margin-right w3-large w3-text-green"></i><span id="email"></span></p>
+				<p><a id="fb" href="http://facebook.com/facengoantran" target="_blank"><i class="fa fa-facebook-official fa-fw w3-margin-right w3-large w3-text-green"></i>Facebook</a></p>
+			</div>
+			<hr>
+		</div>
+	</div>
+	<footer class="w3-container w3-green w3-center w3-margin-top">
+    	<p>Copyright 2017 by Ngoan Tran. All Rights Reserved.<br>
+    		Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a>, 
+    		<a href="https://firebase.google.com" target="_blank">Google Firebase</a>,
+    		<a href="http://fontawesome.io/">Font Awesome</a>
+    	</p>
+	</footer>
+	<script src="https://www.gstatic.com/firebasejs/4.4.0/firebase.js"></script>
+	<script>
+		(function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+			(i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+			m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+		})(window,document,'script','https://www.google-analytics.com/analytics.js','ga');
+
+		ga('create', 'UA-100730810-1', 'auto');
+		ga('send', 'pageview');
+	</script>
+	<script>
+  		// Initialize Firebase
+  		var config = {
+  			apiKey: "AIzaSyCtDHLPCkjTBI9J445JpdCDtCq7pAPE_0g",
+  			authDomain: "ngoantran-21589.firebaseapp.com",
+  			databaseURL: "https://ngoantran-21589.firebaseio.com",
+	  		projectId: "ngoantran-21589",
+  			storageBucket: "ngoantran-21589.appspot.com",
+  			messagingSenderId: "60160265045"
+  		};
+  		firebase.initializeApp(config);
+	</script>
+	<script src="scripts/main.js"></script>
+</body>
+</html>

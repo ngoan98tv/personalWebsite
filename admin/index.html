@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Ngoan Tran Admin</title>
+	<link rel="stylesheet" type="text/css" href="/css/w3.css">
+	<link href="https://fonts.googleapis.com/css?family=Marcellus" rel="stylesheet">
+</head>
+<body class="w3-light-gray" onload="document.getElementById('loginModal').style.display='block'">
+	<header class="w3-container w3-green w3-top">
+		<div class="">
+			<div class="w3-large w3-padding" style="float: left; font-family: 'Marcellus', serif;">
+				<b><i>Ngoan Tran Admin</i></b>
+			</div>
+			<a href="#contact" class="w3-bar-item w3-button" style="float: right;">Contact</a>
+			<a href="#library" class="w3-bar-item w3-button" style="float: right;">Library</a>
+			<a href="#schedule" class="w3-bar-item w3-button" style="float: right;">Schedule</a>
+			<a href="#chat" class="w3-bar-item w3-button" style="float: right;">Chat</a>
+			<a href="#about" class="w3-bar-item w3-button" style="float: right;">About</a>
+		</div>
+	</header>
+	<div style="height: 50px"></div>
+	
+	<div id="loginModal" class="w3-modal">
+		<div class="w3-modal-content">
+			<div class="w3-container w3-center w3-green w3-padding-64">
+				<h3 style="font-family: 'Marcellus', serif; font-weight: bold;">Ngoan Tran Admin</h3>
+					<span id="loginError" style="display: none;" class="w3-leftbar w3-border-red w3-pale-red"></span>
+					<hr>
+					<p><input type="text" id="email" placeholder="Email"></p>
+					<p><input type="password" id="pass" placeholder="Password"></p>
+					<hr>
+					<button class="w3-button w3-black" onclick="signIn()">Sign-in</button>	
+				
+				
+			</div>
+		</div>
+	</div>
+	
+	<div class="w3-content">
+		<div id="about" class="w3-card w3-container w3-margin w3-white w3-padding">
+			<h3>PROFILE</h3>
+			<fieldset>
+				<legend><b>Introduction</b></legend>
+				<p>About <br>
+					<textarea style="width: 100%" rows="5" id="profileAbout"></textarea>
+				</p>
+				<p>Quote <input style="width: 100%" type="text" id="profileQuote"></p>
+				<p>Quote Author<input style="width: 100%" type="text" id="profileQuoteAuth"></p>
+				<p>Avartar link <input style="width: 100%" type="text" id="profileAvartarlink"></p>
+				<p>CV link <input style="width: 100%" type="text" id="profileCVlink"></p>
+				<button class="w3-button w3-green" onclick="introUpdate()">Update</button>
+			</fieldset>
+			<fieldset>
+				<legend><b>Current Work</b></legend>
+				<p>Name <input style="width: 100%" type="text" name="" id="profileWorkName"></p>
+				<p>Time start <input style="width: 100%" type="text" name="" id="profileWorkStart"></p>
+				<p>Describe <input style="width: 100%" type="text" name="" id="profileWorkDescribe"></p>
+				<button class="w3-button w3-green" onclick="workUpdate()">Update</button>
+			</fieldset>
+			<fieldset>
+				<legend><b>Education</b></legend>
+				<p>Name <input style="width: 100%" type="text" id="eduName"></p>
+				<p>Time start <input style="width: 100%" type="text" id="eduStart"></p>
+				<p>Time end <input style="width: 100%" type="text" id="eduEnd"></p>
+				<p>Decribe <input style="width: 100%" type="text" id="eduDescribe"></p>
+				<button class="w3-button w3-green" onclick="eduUpdate()">Update</button>
+			</fieldset>
+			<fieldset id="contact">
+				<legend><b>Contact</b></legend>
+				<p>Address <input style="width: 100%" type="text" id="contactAddress"></p>
+				<p>Mobile <input style="width: 100%" type="text" id="contactMobile"></p>
+				<p>Email <input style="width: 100%" type="text" id="contactEmail"></p>
+				<p>Facebook <input style="width: 100%" type="text" id="contactFb"></p>
+				<button class="w3-button w3-green" onclick="contactUpdate()">Update</button>
+			</fieldset>
+
+			
+		</div>
+		<div id="chat" class="w3-card w3-container w3-margin w3-white w3-padding">
+			
+			<fieldset>
+				<legend><h3>CHAT LOG</h3></legend>
+				<textarea rows="10" readonly style="width: 100%" id="chatLog"></textarea>
+			</fieldset>
+		</div>
+		<div id="schedule" class="w3-card w3-container w3-margin w3-white">
+			<h3>Schedule</h3>
+			<p><input type="text" name=""></p>
+			<button class="w3-button w3-green">Submit</button>
+		</div>
+		<div id="library" class="w3-card w3-container w3-margin w3-white">
+			<h3>Library</h3>
+			<p><input type="text" name=""></p>
+			<button class="w3-button w3-green">Submit</button>
+		</div>
+		
+	</div> 
+	<div class="w3-bottom w3-green w3-container">
+		<button class="w3-black w3-button" id="signOut" onclick="signOut()" style="display: none; float: left;">Sign-Out</button>
+		<button class="w3-black w3-button" id="signIn" onclick="document.getElementById('loginModal').style.display='block'" style="display: block; float: left;">Sign-In</button>
+		<div id="status" class="w3-padding w3-margin-left" style="float: left;"></div>
+		<button onclick="loadData()" class="w3-button w3-black" style="float: right;">Load</button>
+		
+	</div>
+	<footer class="w3-container w3-green w3-center w3-margin-top">
+    	<p>Copyright 2017 by Ngoan Tran. All Rights Reserved.<br>
+    		Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a>, 
+    		<a href="https://firebase.google.com" target="_blank">Google Firebase</a>,
+    		<a href="http://fontawesome.io/">Font Awesome</a>
+    	</p>
+	</footer>
+	<div style="height: 20px"></div>
+	<script src="https://www.gstatic.com/firebasejs/4.4.0/firebase.js"></script>
+	<script>
+  		// Initialize Firebase
+  		var config = {
+  			apiKey: "AIzaSyCtDHLPCkjTBI9J445JpdCDtCq7pAPE_0g",
+  			authDomain: "ngoantran-21589.firebaseapp.com",
+  			databaseURL: "https://ngoantran-21589.firebaseio.com",
+	  		projectId: "ngoantran-21589",
+  			storageBucket: "ngoantran-21589.appspot.com",
+  			messagingSenderId: "60160265045"
+  		};
+  		firebase.initializeApp(config);
+	</script>
+	<script src="main.js"></script>
+</body>
+</html>
