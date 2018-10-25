@@ -1,7 +1,5 @@
 # personalWebsite
 
-Visit at ngoantran.info
-
 Store some helpful things
 
 Used Real-time database, storage and hosting services of Google Firebase.
